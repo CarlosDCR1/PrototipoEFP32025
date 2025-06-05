@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1375b69f-3d42-491c-a2ca-ee460f13ff54">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="DefaultStyle" isDefault="true" fontName="Times New Roman" fontSize="10"/>
+	<style name="Column header" mode="Opaque" forecolor="#666666" backcolor="#F0F0F0" fontName="Times New Roman" fontSize="12" isBold="true" pdfFontName="Helvetica-Bold">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" fontSize="10">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#F9F9F9"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[Select * from tipo_operacion_bancaria]]>
+	</queryString>
+	<field name="id_tipo_operacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_operacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="157" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="113" width="592" height="32" forecolor="#000000" backcolor="#6600CC" uuid="d1a63482-60eb-469e-a19d-92d77502fb62"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="226" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="e281357c-9451-487c-8f24-21985b9edac7"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="22" width="100" height="20" uuid="9d0aa03d-2119-4a82-a978-3e167e403e44"/>
+				<text><![CDATA[id_tipo_operacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="22" width="100" height="20" uuid="9ce517a1-a871-487e-b28a-22f501c26146"/>
+				<text><![CDATA[tipo_operacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="22" width="100" height="20" uuid="bf117259-030f-4937-a13d-5ef714aec5d1"/>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="13" width="100" height="20" uuid="1e07ccaf-7086-4cd8-a2b0-2d64b65f3902"/>
+				<textFieldExpression><![CDATA[$F{id_tipo_operacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="13" width="100" height="20" uuid="8d938647-452a-4cd9-90c0-48b23bed72ad"/>
+				<textFieldExpression><![CDATA[$F{tipo_operacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="13" width="100" height="20" uuid="4362ca2f-59c4-4bf8-827b-8eb52e1efa38"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-18" y="11" width="591" height="24" backcolor="#6600FF" uuid="abcb6b3a-635f-4ff6-a810-fc3078b28aba"/>
+				<staticText>
+					<reportElement x="12" y="4" width="100" height="20" forecolor="#FFFFFF" uuid="4733306f-2899-46f5-9b9a-3406ab7cd844"/>
+					<text><![CDATA[Fecha de envio de reporte]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="428" y="4" width="80" height="20" forecolor="#FFFFFF" uuid="bf3f1da0-48e6-4c6f-ab16-ec511f6118ff"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="528" y="4" width="40" height="20" forecolor="#FFFFFF" uuid="8dc1fe31-a80d-41ab-b103-28fbe3c26751"/>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="154" y="4" width="100" height="20" forecolor="#FFFFFF" uuid="005b1c38-b9ae-4ca0-bf11-87255e15eefb"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-18" y="12" width="591" height="32" forecolor="#000000" backcolor="#6600FF" uuid="6f771776-c85e-4e91-8065-15f9d3add519"/>
+				<staticText>
+					<reportElement x="112" y="8" width="352" height="20" forecolor="#FFFFFF" uuid="db37ff52-f82e-49cd-9364-08893b5cbdc0"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Protegiendo el patrimonio de nuestros clientes siempre]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

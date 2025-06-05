@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1137c84b-418f-4c70-a91b-43deb4b19532">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tipo_cuenta;]]>
+	</queryString>
+	<field name="id_tipo_cuenta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="3" width="591" height="32" forecolor="#000000" backcolor="#6600CC" uuid="52cb51e9-518b-4d59-b51c-1d2fcf4991f6"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="226" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="19259ada-d0d3-4777-b94b-a8f3894d9121"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="67" y="2" width="100" height="20" uuid="95f1963c-9373-487c-8bda-c06ab4489bfc"/>
+				<text><![CDATA[id_tipo_cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="2" width="100" height="20" uuid="9729f89d-0068-4ad2-a222-08580344f79f"/>
+				<text><![CDATA[tipo_cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="2" width="100" height="20" uuid="ce1c4a27-6ae0-4584-9f5d-0cb9d1220815"/>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="20" width="100" height="20" uuid="ea6e53f7-35eb-463e-af5c-c9666fb1ac98"/>
+				<textFieldExpression><![CDATA[$F{id_tipo_cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="20" width="100" height="20" uuid="a94d9ce2-d490-4173-b2e3-807a4975c4ac"/>
+				<textFieldExpression><![CDATA[$F{tipo_cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="20" width="100" height="20" uuid="905ba2b8-7746-4d35-98ca-a736d51820eb"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="37" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fcd58b7f-a166-4595-a1e0-7a4241d9ae48">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+        <style name="DefaultStyle" isDefault="true" fontName="Times New Roman" fontSize="10"/>
+	<style name="Column header" mode="Opaque" forecolor="#666666" backcolor="#F0F0F0" fontName="Times New Roman" fontSize="12" isBold="true" pdfFontName="Helvetica-Bold">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" fontSize="10">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#F9F9F9"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[Select * from detalle_movimientos_bancarios]]>
+	</queryString>
+	<field name="id_detalle" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_movimiento_bancario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_tipo_operacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_tipo_pago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="34" width="591" height="32" forecolor="#000000" backcolor="#6600CC" uuid="b3c2e0aa-a5c4-43b7-9240-9c6ad3d3d4f4"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="226" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="72bc554e-cd2e-4620-ac2c-59a2152c894e"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="12" width="53" height="20" uuid="79de04e2-f7f7-40e1-91b6-986521415359"/>
+				<text><![CDATA[id_detalle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="12" width="85" height="20" uuid="ca580b8b-91b8-415b-bb7f-28a8b2ef6271"/>
+				<text><![CDATA[id_movimiento_bancario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="12" width="89" height="20" uuid="4e23639b-8265-4595-9c6b-1636fe5c6eec"/>
+				<text><![CDATA[id_tipo_operacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="12" width="66" height="20" uuid="3b8f3f30-779c-48f3-af88-dfd18bcc6334"/>
+				<text><![CDATA[id_tipo_pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="12" width="73" height="20" uuid="3be5a6f8-167f-415b-9767-eaf9e93a7990"/>
+				<text><![CDATA[monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="12" width="100" height="20" uuid="e34f0a79-e3b1-462f-8002-2d4d9d8908bb"/>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="20" width="53" height="20" uuid="da454aed-1d55-425d-8148-cd8890bc8f77"/>
+				<textFieldExpression><![CDATA[$F{id_detalle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="20" width="85" height="20" uuid="d962101f-17a8-4d6e-bb83-dd1ffe7a95e3"/>
+				<textFieldExpression><![CDATA[$F{id_movimiento_bancario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="20" width="89" height="20" uuid="41be3db4-7619-49d6-804e-f1a3a7cc04ef"/>
+				<textFieldExpression><![CDATA[$F{id_tipo_operacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="20" width="66" height="20" uuid="d65c91ce-bd7b-4a49-a6bc-28a69a804b81"/>
+				<textFieldExpression><![CDATA[$F{id_tipo_pago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="20" width="73" height="20" uuid="4d2a5783-8856-4b23-aaa3-42035ef4cedf"/>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="20" width="131" height="20" uuid="34661814-fc3c-44c5-a385-1035cd4e24db"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="10" width="591" height="24" backcolor="#6600FF" uuid="a3a7c3a7-ec53-4cfd-a988-11ec90fbb135"/>
+				<staticText>
+					<reportElement x="12" y="4" width="100" height="20" forecolor="#FFFFFF" uuid="29ba56cc-a4e1-449a-8940-00f0941aa60e"/>
+					<text><![CDATA[Fecha de envio de reporte]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="428" y="4" width="80" height="20" forecolor="#FFFFFF" uuid="8bba7b56-fe77-44c1-ac95-6f336ac90cf6"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="528" y="4" width="40" height="20" forecolor="#FFFFFF" uuid="e562ce97-9ec9-4fdf-97d2-db3e94378f90"/>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="154" y="4" width="100" height="20" forecolor="#FFFFFF" uuid="a44e3a57-c769-491c-a6a3-5a203d11a36d"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="10" width="591" height="32" forecolor="#000000" backcolor="#6600FF" uuid="c704fc89-c496-4cf6-8aab-afb86e343ff0"/>
+				<staticText>
+					<reportElement x="112" y="8" width="352" height="20" forecolor="#FFFFFF" uuid="4940a836-a672-40d6-b28d-f21b959f4766"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Protegiendo el patrimonio de nuestros clientes siempre]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="ReporteRelPerfApl" language="java" pageWidth="595" pageHeight="842"
+    columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+    uuid="e58b0ce5-6fdc-4ffb-bf61-badd85cbed43">
+
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+
+    <queryString language="SQL">
+        <![CDATA[SELECT * FROM sig2k25.relperfapl;]]>
+    </queryString>
+
+    <!-- Campos -->
+    <field name="aplicacion_codigo" class="java.lang.Integer"/>
+    <field name="perfil_codigo" class="java.lang.Integer"/>
+    <field name="consultar_rpa" class="java.lang.String"/>
+    <field name="actualizar_rpa" class="java.lang.String"/>
+    <field name="eliminar_rpa" class="java.lang.String"/>
+    <field name="imprimir_rpa" class="java.lang.String"/>
+    <field name="insertar_rpa" class="java.lang.String"/>
+    <field name="fecha_rpa" class="java.lang.String"/>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+
+    <title>
+        <band height="40" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="5" width="555" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[REPORTE DE PERFAPLI]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+
+    <columnHeader>
+        <band height="25" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="2" width="70" height="20"/>
+                <text><![CDATA[Aplicación]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="75" y="2" width="70" height="20"/>
+                <text><![CDATA[Perfil]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="150" y="2" width="60" height="20"/>
+                <text><![CDATA[Consultar]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="215" y="2" width="60" height="20"/>
+                <text><![CDATA[Actualizar]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="2" width="60" height="20"/>
+                <text><![CDATA[Eliminar]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="345" y="2" width="60" height="20"/>
+                <text><![CDATA[Imprimir]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="410" y="2" width="60" height="20"/>
+                <text><![CDATA[Insertar]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="475" y="2" width="70" height="20"/>
+                <text><![CDATA[Fecha]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="70" height="20"/>
+                <textFieldExpression><![CDATA[$F{aplicacion_codigo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="75" y="0" width="70" height="20"/>
+                <textFieldExpression><![CDATA[$F{perfil_codigo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="150" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{consultar_rpa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="215" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{actualizar_rpa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{eliminar_rpa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="345" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{imprimir_rpa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="410" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{insertar_rpa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="475" y="0" width="70" height="20"/>
+                <textFieldExpression><![CDATA[$F{fecha_rpa}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <columnFooter>
+        <band height="20" splitType="Stretch"/>
+    </columnFooter>
+
+    <pageFooter>
+        <band height="20" splitType="Stretch"/>
+    </pageFooter>
+
+    <summary>
+        <band height="20" splitType="Stretch"/>
+    </summary>
+
+</jasperReport>

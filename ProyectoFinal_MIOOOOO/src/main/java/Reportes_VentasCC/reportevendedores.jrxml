@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MantenimientoVendedores" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e58b0ce5-6fdc-4ffb-bf61-badd85cbed43">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sig2k25.vendedores;]]>
+	</queryString>
+	<field name="id_vendedor" class="java.lang.Integer"/>
+	<field name="nombre_vendedor" class="java.lang.String"/>
+	<field name="apellido_vendedor" class="java.lang.String"/>
+	<field name="direccion_vendedor" class="java.lang.String"/>
+	<field name="telefono_vendedor" class="java.lang.String"/>
+	<field name="email_vendedor" class="java.lang.String"/>
+	<field name="comision" class="java.lang.String"/>
+	<field name="estatus_vendedor" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="5" width="802" height="85" backcolor="#116BA7" uuid="e83d4326-a11d-4d7e-a1fa-420fd78f5701"/>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+					<topPen lineWidth="1.5" lineStyle="Solid"/>
+					<leftPen lineWidth="1.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.5" lineStyle="Solid"/>
+					<rightPen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="15" width="681" height="30" forecolor="#000000" uuid="ebd011eb-2b27-44ae-b803-01c474dfadd7"/>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+					<topPen lineWidth="1.5" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.5" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.5" lineStyle="Dashed"/>
+					<rightPen lineWidth="1.5" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Broadway" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE VENDEDORES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="250" y="59" width="260" height="20" uuid="41df665e-5b9c-41f9-b820-d7f7e9be7996"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<text><![CDATA[Sistema de Gestión Ventas y Cuentas por Cobrar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="704" y="5" width="100" height="85" uuid="3c6163d7-8550-4ab4-8b07-17fe36454c33"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<image>
+				<reportElement x="708" y="0" width="89" height="90" uuid="c511e5d8-4f09-4c1b-943a-c56fd22823ef"/>
+				<imageExpression><![CDATA["src\\main\\java\\Reportes_VentasCC\\logovccs.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="510" y="31" width="73" height="59" uuid="e9bcde2b-c6a8-4057-b825-2c23b84c854b"/>
+				<imageExpression><![CDATA["src\\main\\java\\Reportes_VentasCC\\vendedor.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="30" height="30" backcolor="#D6EAF8" uuid="7d491a57-cf6e-44c6-856a-d5dbb38c00cd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="0" width="108" height="30" backcolor="#85C1E9" uuid="88c38ac5-8b87-4b6e-9cef-397a6cefba73"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="138" y="0" width="112" height="30" backcolor="#85C1E9" uuid="0b7f154c-a9dd-4b82-9fc1-22d6f725c3f4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="250" y="0" width="151" height="30" backcolor="#85C1E9" uuid="8f6cec47-29a7-428e-8d73-73fa21e2ff94"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="401" y="0" width="120" height="30" backcolor="#85C1E9" uuid="daa29bff-7435-4677-9f3e-e470570a66a5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="521" y="0" width="138" height="30" backcolor="#85C1E9" uuid="57dc2e2b-f70e-484b-adb2-493dd2082bad"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="659" y="0" width="75" height="30" backcolor="#85C1E9" uuid="e3e024e6-6bf4-40f4-9bcb-548f6fc409b9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comision]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="734" y="0" width="68" height="30" backcolor="#85C1E9" uuid="74b98e7a-5fa0-4268-9b49-cdc4c4cd820f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estatus]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="30" height="20" backcolor="#D6EAF8" uuid="8ed97b4e-0183-4456-9e0a-93f0f0589a57"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="108" height="20" uuid="d238d954-0ba4-4e17-a84a-72768bf65da8"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="112" height="20" uuid="55321373-110e-4e8e-8528-97a8c561599f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellido_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="151" height="20" uuid="328e09aa-a193-4ded-878c-87452ff18ebc"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="120" height="20" uuid="8c7523e9-397d-4f23-9b72-ba9a318f0cce"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="521" y="0" width="138" height="20" uuid="9e08220d-4806-4d8c-af67-7ee8eef0bb26"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email_vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="659" y="0" width="75" height="20" uuid="ff2f5404-8db6-4a8b-b55f-22b88fce9723"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{comision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="734" y="0" width="68" height="20" uuid="ab75a65c-fb27-4c5e-95c9-b699a9d2c39d"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estatus_vendedor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="50" splitType="Stretch"/>
+	</summary>
+</jasperReport>

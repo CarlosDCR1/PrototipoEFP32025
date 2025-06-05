@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="041bc1b6-9621-4fd9-af2d-1aaa5206b6df">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="329"/>
+	<property name="ireport.y" value="233"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from sig2k25.metodo_pago]]>
+	</queryString>
+	<field name="id_metodo_pago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_metodo_pago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estatus_metodo_pago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="2" width="100" height="20" uuid="625d95ec-70d3-466c-8c5c-d7e69b7d1629"/>
+				<textElement>
+					<font fontName="Bodoni MT" size="14"/>
+				</textElement>
+				<text><![CDATA[id_metodo_pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="2" width="145" height="20" uuid="9384dffe-3e93-4ddc-8668-4c043ebaba22"/>
+				<textElement>
+					<font fontName="Bodoni MT" size="14"/>
+				</textElement>
+				<text><![CDATA[nombre_metodo_pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="2" width="139" height="20" uuid="952e159a-6dad-4780-af15-eda970a6aa6a"/>
+				<textElement>
+					<font fontName="Bodoni MT" size="14"/>
+				</textElement>
+				<text><![CDATA[estatus_metodo_pago]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement mode="Transparent" x="0" y="0" width="159" height="29" uuid="fa81ee04-a12e-4a47-8914-96884f22ce77"/>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="162" y="0" width="159" height="29" uuid="792967ff-48da-4733-a64f-154128e1fcd8"/>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="324" y="0" width="159" height="29" uuid="2890bb5b-ca03-4eb8-93a8-c94820b9614a"/>
+			</ellipse>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="38" y="19" width="100" height="20" uuid="25475c90-538b-4faf-9e26-d86787c97aef"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_metodo_pago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="19" width="100" height="20" uuid="cff1263c-7ba4-4027-b6df-76c9d00feb0b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre_metodo_pago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="19" width="100" height="20" uuid="f69a6e0e-7ae8-4a7e-9161-c4f82c6b1239"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estatus_metodo_pago}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="16" width="471" height="20" uuid="7526930c-bfb9-4078-897d-592e1eec58f4"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
